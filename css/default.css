@@ -14,10 +14,18 @@ body             { margin: 0; padding: 0; }
 .center          { position: absolute; margin: 0; top: 50%; left: 50%; transform: translate(-50%, -50%); }
 .no_select       { cursor: default; }
 .no_select::selection {  }
+.perspective     { perspective: 800px; transform-style: preserve-3d; }
+.shadowed        { filter: drop-shadow(0 0 10px #000a); }
 
 .tr_up_10        { transform: rotateX(10deg);  }
 .tr_up_20        { transform: rotateX(20deg);  }
 .tr_up_30        { transform: rotateX(30deg);  }
+.tr_rg_10        { transform: rotateY(10deg);  }
+.tr_rg_20        { transform: rotateY(20deg);  }
+.tr_rg_30        { transform: rotateY(30deg);  }
+.tr_lf_10        { transform: rotateY(-10deg); }
+.tr_lf_20        { transform: rotateY(-20deg); }
+.tr_lf_30        { transform: rotateY(-30deg); }
 .tr_down_10      { transform: rotateX(-10deg); }
 .tr_down_20      { transform: rotateX(-20deg); }
 .tr_down_30      { transform: rotateX(-30deg); }

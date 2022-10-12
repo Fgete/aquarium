@@ -1,39 +1,86 @@
 <!DOCTYPE html>
 <html lang="fr">
 	<head>
-		<title>Aquarium - </title>
+		<title>Virtualium</title>
 		<meta charset="utf-8"/>
-		<link rel="shortcut icon" type="image/x-icon" href="./images/logo.png"/>
+		<link rel="shortcut icon" type="image/x-icon" href="./images/fish.png"/>
 		<link rel="stylesheet" type="text/css" href="./css/colors.css">
 		<link rel="stylesheet" type="text/css" href="./css/font.css">
 		<link rel="stylesheet" type="text/css" href="./css/default.css">
 		<link rel="stylesheet" type="text/css" href="./css/global.css">
 	</head>
 
-	<body class="width_full height_full">
-		<header>
-			<div class="portrait"><div class="center bold">AQUARIUM</div></div>
-			<div class="landscape"><div class="center bold">AQUARIUM</div></div>
+	<body onload="AutoPlay()" class="width_full height_full">
+
+		<header class="transition">
+			<div id="h-title" class="center f-cano transition">Virtualium</div>
 		</header>
 
-		<div id="content" class="width_100 height_100">
+		<div id="content" class="width_100 height_auto flex_column">
 
-			<div class="width_100 height_100">
+			<div id="content-video">
+				<video id="showcase" class="width_100 height_auto" autoplay loop muted>
+				    <source src="./videos/aquarium.mp4" type="video/mp4">
+				</video>
+				<div class="width_100 height_100"></div>
+			</div>
 
-				<div id="panel-bot" class="width_100 height_50">
-					<img src="./images/aquarium.png" class="width_100">
+			<h1 class="f-ultraLight">Qu'est ce que <span class="f-cano">Virtualium</span> ?</h1>
 
+			<p class="width_70 f-simpleText">Ce projet consiste en la création d'environnements vituels intéractifs à thème. Le but est de répondre à un besoin de divertissement dans des situations peu attractives.</p>
+
+			<p class="width_70 f-simpleText margin_top_20p">Besoin de divertir les enfants au restaurant, besoin de réduire le stress d'un patient dans une salle d'attente, besoin d'attirer les curieux sur un salon, besoin d'une expérience nouvelle dans un musée... Virtualium est la solution !</p>
+
+			<div class="landscape width_100">
+				<div class="width_100 flex_column">
+					<div class="flex_row justify_between width_60 perspective">
+						<div class="flex_column">
+							<h1 class="f-ultraLight">Qui sommes <span class="f-cano">nous</span> ?</h1>
+
+							<p class="width_70 f-simpleText margin_top_20p">Nous sommes trois étudiants de l'école de Jeux Vidéos et Serious Games <a href="https://ludus-academie.fr/" class="f-cano" alt="Lien vers le site de l'école Ludus Academie">Ludus Academie</a>. Nous avons acquis lors de notre formation de nombreuses compétences dans le domaine du média intéractif et le 10e art. Ces compétences nous permettent de réaliser toutes sortes de solutions innovantes et pertinantes pouvant répondre à vos besoins.</p>
+						</div>
+						<img src="./images/crew.png" class="shadowed width_50 tr_lf_30" alt="photo de l'équipe de développement">
+					</div>
+				</div>
+			</div>
+			
+			<div class="portrait width_100">
+				<div class="flex_column width_100">
+					
+					<h1 class="f-ultraLight">Qui sommes <span class="f-cano">nous</span> ?</h1>
+
+					<img src="./images/crew.png" class="shadowed width_50 tr_lf_10" alt="photo de l'équipe de développement">
+
+					<p class="width_70 f-simpleText">Besoin de divertir les enfants au restaurant, besoin de réduire le stress d'un patient dans une salle d'attente, besoin d'attirer les curieux sur un salon, besoin d'une expérience nouvelle dans un musée... Virtualium est la solution !</p>
 
 				</div>
 
 			</div>
+			
 
 		</div>
 
-		<footer>
-			<div class="portrait"><div class="center bold">FOOTER PORTRAIT</div></div>
-			<div class="landscape"><div class="center bold">FOOTER LANDSCAPE</div></div>
-		</footer>
+		<footer></footer>
 	</body>
+
+	<script>
+		function AutoPlay(){
+			document.getElementById('showcase').play();
+		}
+
+		window.addEventListener("scroll", function(){
+			header = document.getElementsByTagName("header")[0];
+			title = document.getElementById("h-title");
+
+			if (window.scrollY == 0) {
+				header.style.height  = "130px";
+		    	title.style.fontSize = "4em";
+			} else {
+				header.style.height  = "50px";
+		    	title.style.fontSize = "2em";
+			}
+		});
+
+	</script>
 
 </html>
