@@ -24,8 +24,7 @@ header>.portrait #id-img div      { border-radius: 50%; background-color: var(--
 header>.portrait #id-img img      { position: absolute; top: 0; }
 header>.portrait #id-title        { line-height: 0; }
 header>.portrait h1               { letter-spacing: 13px; font-size: 3em; }
-header>.portrait h1 .h-arrow      { position: absolute; font-size: 0; }
-header>.portrait .page-title      { position: absolute; left: 50%; transform: translate(-50%, 100px); color: var(--white); opacity: 50%; font-size: 1.5em; filter: drop-shadow(0 0 10px var(--white)); }
+header>.portrait .page-title      { position: absolute; left: 50%; transform: translate(-50%, 150px); color: var(--white); opacity: 50%; font-size: 1.5em; filter: drop-shadow(0 0 10px var(--white)); }
 header>.portrait h2               { letter-spacing: 25px; font-size: 1.2em; }
 header>.portrait .h-button        { letter-spacing:  7px; font-size: 1.5em; margin-right: 1vw; padding: 0 5px 0 5px; box-sizing: border-box; border-bottom: solid 10px #0000; cursor: pointer; color: var(--text); }
 header>.portrait .h-button img    { width: 60px; }
@@ -41,14 +40,12 @@ header>.landscape.h-thin h2             { font-size: 0em; }
 header>.landscape.h-thin .h-button      { font-size: 0em; margin-right: 20px; border-bottom: solid 5px #0000; }
 header>.landscape.h-thin .h-b-select    { border-bottom: solid 5px var(--mainColor); }
 
-header>.portrait.h-thin                 { height: 40px; background-color: var(--alpBackground); }
-header>.portrait.h-thin #id-img         { width: 30px; height: 30px; }
-header>.portrait.h-thin h1              { font-size: 1.2em; }
-header>.portrait.h-thin h1 .h-arrow     { font-size: .5em; }
-header>.portrait.h-thin h1 .page-title  { left: 0; transform: translate(250px, 0); color: var(--text); opacity: 100%; font-size: .5em; filter: drop-shadow(0 0 0 #0000); }
+header>.portrait.h-thin                 { height: 120px; background-color: var(--alpBackground); }
+header>.portrait.h-thin h1              { font-size: 3em; }
+header>.portrait.h-thin h1 .page-title  { left: 0; transform: translate(130px, 30px); color: var(--text); opacity: 100%; font-size: .4em; filter: none; letter-spacing: 18px; }
 header>.portrait.h-thin h2              { font-size: 0em; }
-header>.portrait.h-thin .h-button       { font-size: 0em; margin-right: 20px; border-bottom: solid 5px #0000; }
-header>.portrait.h-thin .h-b-select     { border-bottom: solid 5px var(--mainColor); }
+header>.portrait.h-thin .h-button       { font-size: 0em; margin-right: 20px; border-bottom: solid 5px #0000; padding-top: 25px; }
+header>.portrait.h-thin .h-b-select     { border-bottom: solid 10px var(--mainColor); }
 
 /*--- FOOTER ---*/
 footer                    { z-index: 999; width: 100%; height: 130px; position: relative; }
@@ -58,7 +55,7 @@ footer .landscape         { width: 100%; height: 100%; background-color: #af08; 
 /*--- CONTENT ---*/
 #content                  { position: relative; }
 #content h1               { text-align: center; color: var(--title); }
-#content p                { max-width: 600px; }
+#content p                { max-width: 600px; text-align: justify; }
 #content-video            { position: relative; }
 #content-video div        { position: absolute; top: 0; background: linear-gradient(0deg, var(--background) 0%, #fff0 30%); }
 
@@ -74,9 +71,13 @@ footer .landscape         { width: 100%; height: 100%; background-color: #af08; 
   and (orientation: portrait){
   	[class^="portrait"]  { display: block; }
   	[class^="landscape"] { display: none;  }
+    #content p           { font-size: 2em; letter-spacing: 2.2px; line-height: 45px; }
+    #content h1          { font-size: 3em; }
 }
 @media screen
   and (orientation: landscape){
   	[class^="portrait"]  { display: none;  }
   	[class^="landscape"] { display: block; }
+    #content p           { font-size: 1em; letter-spacing: 1.1px; line-height: 25px; }
+    #content h1          {  }
 }
