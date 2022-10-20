@@ -1,15 +1,53 @@
-body {
-    overflow-x: hidden;
-}
+body                      { overflow-x: hidden; background-color: var(--background); color: var(--text); }
 
 img                       { border-radius: 10px; }
-a                         { text-decoration: none; color: var(--secondColor); }
+a                         { text-decoration: none; color: var(--title); }
 a:hover                   { text-decoration: underline; }
 
 /*--- HEADER ---*/
-header                    { z-index: 999; position: fixed; top: 0; width: 100%; height: 130px; }
-header .portrait          { width: 100%; height: 100%; }
-header .landscape         { width: 100%; height: 100%; }
+header>.landscape                 { z-index: 999; position: fixed; top: 0; width: 100%; height: 70px; background-color: var(--background); color: var(--text); }
+header>.landscape #id-img         { position: relative; width: 50px; height: 50px; margin: 0 15px 0 15px; }
+header>.landscape #id-img div     { border-radius: 50%; background-color: var(--mainColor); }
+header>.landscape #id-img img     { position: absolute; top: 0; }
+header>.landscape #id-title       { line-height: 0; }
+header>.landscape h1              { letter-spacing: 13px; }
+header>.landscape h1 .h-arrow     { position: absolute; transform: translateX(10px); font-size: 0; }
+header>.landscape h1 .page-title  { position: absolute; left: 50%; transform: translate(-50%, 100px); color: var(--white); opacity: 50%; font-size: 1.5em; filter: drop-shadow(0 0 10px var(--white)); }
+header>.landscape h2              { letter-spacing: 21px; font-size: .7em; }
+header>.landscape .h-button       { letter-spacing:  7px; font-size: .7em; margin-right: 1vw; padding: 0 5px 0 5px; box-sizing: border-box; border-bottom: solid 5px #0000; cursor: pointer; color: var(--text); }
+header>.landscape .h-button:hover { text-decoration: none; background-color: var(--hovBackground); }
+header>.landscape .h-b-select     { border-bottom: solid 5px var(--mainColor); }
+
+header>.portrait                  { z-index: 999; position: fixed; top: 0; width: 100%; height: 70px; background-color: var(--background); color: var(--text); }
+header>.portrait #id-img          { position: relative; width: 50px; height: 50px; margin: 0 15px 0 15px; }
+header>.portrait #id-img div      { border-radius: 50%; background-color: var(--mainColor); }
+header>.portrait #id-img img      { position: absolute; top: 0; }
+header>.portrait #id-title        { line-height: 0; }
+header>.portrait h1               { letter-spacing: 13px; }
+header>.portrait h1 .h-arrow      { position: absolute; font-size: 0; }
+header>.portrait .page-title      { position: absolute; left: 50%; transform: translate(-50%, 100px); color: var(--white); opacity: 50%; font-size: 1.5em; filter: drop-shadow(0 0 10px var(--white)); }
+header>.portrait h2               { letter-spacing: 21px; font-size: .7em; }
+header>.portrait .h-button        { margin-right: 1vw; padding: 0 5px 0 5px; box-sizing: border-box; border-bottom: solid 5px #0000; cursor: pointer; color: var(--text); }
+header>.portrait .h-button:hover  { text-decoration: none; background-color: var(--hovBackground); }
+header>.portrait .h-b-select      { border-bottom: solid 5px var(--mainColor); }
+
+
+header>.landscape.h-thin                { height: 40px; background-color: var(--alpBackground); }
+header>.landscape.h-thin #id-img        { width: 30px; height: 30px; }
+header>.landscape.h-thin h1 .h-arrow    { font-size: .5em; }
+header>.landscape.h-thin h1 .page-title { left: 0; transform: translate(335px, 0); color: var(--text); opacity: 100%; font-size: .5em; filter: drop-shadow(0 0 0 #0000); }
+header>.landscape.h-thin h2             { font-size: 0em; }
+header>.landscape.h-thin .h-button      { font-size: 0em; margin-right: 20px; border-bottom: solid 5px #0000; }
+header>.landscape.h-thin .h-b-select    { border-bottom: solid 5px var(--mainColor); }
+
+header>.portrait.h-thin                 { height: 40px; background-color: var(--alpBackground); }
+header>.portrait.h-thin #id-img         { width: 30px; height: 30px; }
+header>.portrait.h-thin h1              { font-size: 1.2em; }
+header>.portrait.h-thin h1 .h-arrow     { font-size: .5em; }
+header>.portrait.h-thin h1 .page-title  { left: 0; transform: translate(250px, 0); color: var(--text); opacity: 100%; font-size: .5em; filter: drop-shadow(0 0 0 #0000); }
+header>.portrait.h-thin h2              { font-size: 0em; }
+header>.portrait.h-thin .h-button       { font-size: 0em; margin-right: 20px; border-bottom: solid 5px #0000; }
+header>.portrait.h-thin .h-b-select     { border-bottom: solid 5px var(--mainColor); }
 
 /*--- FOOTER ---*/
 footer                    { z-index: 999; width: 100%; height: 130px; position: relative; }
@@ -18,10 +56,10 @@ footer .landscape         { width: 100%; height: 100%; background-color: #af08; 
 
 /*--- CONTENT ---*/
 #content                  { position: relative; }
-#content h1               { text-align: center; color: var(--secondColor); opacity: 50%; }
+#content h1               { text-align: center; color: var(--title); }
 #content p                { max-width: 600px; }
 #content-video            { position: relative; }
-#content-video div        { position: absolute; top: 0; background: linear-gradient(0deg, #ffff 0%, #fff0 30%); }
+#content-video div        { position: absolute; top: 0; background: linear-gradient(0deg, var(--background) 0%, #fff0 30%); }
 
 #panel-bot                { position: absolute; background-color: #f008; }
 #panel-left, #panel-right { position: absolute; background-color: #0f08; }
