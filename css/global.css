@@ -48,9 +48,11 @@ header>.portrait.h-thin .h-button       { font-size: 0em; margin-right: 20px; bo
 header>.portrait.h-thin .h-b-select     { border-bottom: solid 10px var(--mainColor); }
 
 /*--- FOOTER ---*/
-footer                    { z-index: 999; width: 100%; height: 130px; position: relative; }
-footer .portrait          { width: 100%; height: 100%; background-color: #fa08; }
-footer .landscape         { width: 100%; height: 100%; background-color: #af08; }
+footer>.landscape                 { height: 130px; position: relative; background-color: var(--subBackground); }
+footer>.landscape h1              { color: var(--title); }
+footer>.landscape a img           { opacity: 50%; }
+footer>.landscape a:hover         { filter: drop-shadow(0 0 10px var(--mainColor)); }
+footer>.landscape a:hover img     { opacity: 100%; transform: scale(1.2); cursor: not-allowed; }
 
 /*--- CONTENT ---*/
 #content                  { position: relative; }
